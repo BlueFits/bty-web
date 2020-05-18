@@ -1,0 +1,34 @@
+@font-face {
+    font-family: "Myriad-reg";
+    src: url("../assets/fonts/MYRIADPRO-REGULAR.woff");
+}
+
+@font-face {
+    font-family: "Myriad-reg-light";
+    src: url("../assets/fonts/MyriadPro-Light.woff");
+}
+
+@font-face {
+    font-family: "Myriad-semi-bold";
+    src: url("../assets//fonts/MYRIADPRO-SEMIBOLD.woff");
+}
+
+.defaultText {
+    font-size: 16px;
+    font-family: "Myriad-reg";
+}
+
+.defaultTextLight {
+    font-size: 16px;
+    font-family: "Myriad-reg-light";
+}
+
+.headerText {
+    font-size: 42px;
+    font-family: "Myriad-semi-bold";
+}
+
+.smallText {
+    font-size: 12px;
+    font-family: "Myriad-reg";
+}
