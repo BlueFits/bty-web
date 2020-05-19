@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import validator from "validator";
-import { DefaultTextSemiBold, ErrorMsg } from "../../../controllers/textController";
+import { DefaultTextSemiBold, ErrorMsg, DefaultTextLight, DefaultTextConItalic } from "../../../controllers/textController";
 import mail from "../../../assets/images/mail.png";
 //CONSTANTS
 import Colors from "../../../constants/Colors";
@@ -55,6 +55,7 @@ const LatestUpdates = () => {
 
                 <div className="latestUpdatesTxt">
                     <DefaultTextSemiBold>Want to know about our latest updates?</DefaultTextSemiBold>
+                    <DefaultTextLight>Alpha testing is out for google play, submit your email to be a part of the aplha tester group</DefaultTextLight>
                 </div>
 
                 <form onSubmit={submitHandler}>

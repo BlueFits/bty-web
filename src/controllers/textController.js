@@ -19,6 +19,18 @@ export const DefaultTextSemiBold = (props) => {
     );
 };
 
+export const DefaultTextSemiBoldItalic = (props) => {
+    return (
+        <p style={{...props.style}} className="defaultTextSemiBoldItalic">{props.children}</p>
+    );
+};
+
+export const DefaultTextConItalic = (props) => {
+    return (
+        <p style={{...props.style}} className="defaultTextConItalic">{props.children}</p>
+    );
+};
+
 export const HeaderText = (props) => {
     return (
         <h1 style={{...props.style}} className="headerText">{props.children}</h1>

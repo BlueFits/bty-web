@@ -13,6 +13,16 @@
     src: url("../assets//fonts/MYRIADPRO-SEMIBOLD.woff");
 }
 
+@font-face {
+    font-family: "Myriad-semi-bold-italic";
+    src: url("../assets/fonts/MYRIADPRO-SEMIBOLDIT.woff");
+}
+
+@font-face {
+    font-family: "Myriad-con-italic";
+    src: url("../assets/fonts/MYRIADPRO-CONDIT.woff");
+}
+
 .defaultText {
     font-size: 16px;
     font-family: "Myriad-reg";
@@ -26,6 +36,16 @@
 .defaultTextSemiBold {
     font-size: 16px;
     font-family: "Myriad-semi-bold";
+}
+
+.defaultTextSemiBoldItalic {
+    font-size: 16px;
+    font-family: "Myriad-semi-bold-italic";
+}
+
+.defaultTextConItalic {
+    font-size: 16px;
+    font-family: "Myriad-con-italic";
 }
 
 .headerText {
