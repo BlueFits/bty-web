@@ -13,6 +13,12 @@ export const DefaultTextLight = (props) => {
     );
 };
 
+export const DefaultTextSemiBold = (props) => {
+    return (
+        <p style={{...props.style}} className="defaultTextSemiBold">{props.children}</p>
+    );
+};
+
 export const HeaderText = (props) => {
     return (
         <h1 style={{...props.style}} className="headerText">{props.children}</h1>
@@ -22,5 +28,11 @@ export const HeaderText = (props) => {
 export const SmallText = (props) => {
     return (
         <p style={{...props.style}} className="smallText">{props.children}</p>
+    );
+}
+
+export const ErrorMsg = (props) => {
+    return (
+        <p style={{...props.style}} className="errorMsg">{props.children}</p>
     );
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import './stylesheets/styles.css';
 //COMPONENTS
-import NavigationContoller from "./components/NavigationController";
+import NavigationContoller from "./Navigation/NavigationController";
 
 const App = () => {
-    return <NavigationContoller/>;
+    return <NavigationContoller />;
 };
 
 export default App;

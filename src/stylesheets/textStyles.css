@@ -23,6 +23,11 @@
     font-family: "Myriad-reg-light";
 }
 
+.defaultTextSemiBold {
+    font-size: 16px;
+    font-family: "Myriad-semi-bold";
+}
+
 .headerText {
     font-size: 42px;
     font-family: "Myriad-semi-bold";
@@ -31,4 +36,10 @@
 .smallText {
     font-size: 12px;
     font-family: "Myriad-reg";
+}
+
+.errorMsg {
+    font-size: 16px;
+    font-family: "Myriad-reg";
+    color: #e74c3c;
 }
