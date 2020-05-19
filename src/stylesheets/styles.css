@@ -46,7 +46,9 @@ button {
     justify-content: space-between;
     position: relative;
     background-image: url("../assets/images/mainPageBackdrop.png");
+    
     background-position: center;
+    background-position-y: 0;
     background-attachment: fixed;
     /*background-size: contain;*/
 }

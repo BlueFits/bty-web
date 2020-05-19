@@ -20,6 +20,7 @@ const MainSection = () => {
         const parallaxEffect = () => {
             const parallax = document.getElementById("parallax");
             let offset = window.pageYOffset;
+            console.log(offset);
             parallax.style.backgroundPositionY = offset * -0.3 + "px";;
         }
         
