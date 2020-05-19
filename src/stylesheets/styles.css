@@ -25,6 +25,7 @@ button {
 }
 
 .mainPage {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -169,4 +170,24 @@ button {
 
 .legal-notices {
     display: flex;
+}
+
+.footerLinks {
+    text-decoration: none;
+    color: #fff;
+}
+
+.disclaimers {
+    padding: 20px 150px;
+    line-height: 1.5em;
+    text-align: justify;
+}
+
+.disclaimers strong {
+    margin: 10px 0;
+    display: block;
+}
+
+.disclaimers > ul > li {
+    list-style: none;
 }

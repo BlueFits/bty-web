@@ -9,12 +9,12 @@ import googleCTA from "../../assets/images/GooglePlayCTA.svg";
 import appleCTA from "../../assets/images/AppleCTA.svg";
 import phone from "../../assets/images/phoneHome.png";
 //CONTROLLERS
-import { DefaultTextLight, HeaderText, SmallText } from "../../controllers/textController";
+import { HeaderText, SmallText } from "../../controllers/textController";
 
 const MainSection = () => {
     //CONSTANTS
-    const windowHeight = useWindowSize()[1];
-    const windowWidth = useWindowSize()[0];
+    const windowHeight = useWindowSize(useLayoutEffect, useState)[1];
+    const windowWidth = useWindowSize(useLayoutEffect, useState)[0];
 
     //Helper Functions
     function useWindowSize() {
@@ -29,6 +29,7 @@ const MainSection = () => {
         }, []);
         return size;
     };
+
     
     //Parallax
     new simpleParallax(document.getElementsByClassName("cloudAsset"), {
@@ -38,7 +39,7 @@ const MainSection = () => {
     });
 
     return (
-        <section style={{ height: windowHeight }} className="mainPage">
+        <section className="mainPage">
             <header className="headerContainer" style={{ height: windowHeight * (0.4/3) }}>
                 <div>
                     <div className="headerLogoImgContainer">

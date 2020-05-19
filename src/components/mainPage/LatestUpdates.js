@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../stylesheets/styles.css";
 import { DefaultText } from "../../controllers/textController";
 import mail from "../../assets/images/mail.png";
@@ -6,6 +6,18 @@ import mail from "../../assets/images/mail.png";
 import Colors from "../../constants/Colors";
 
 const LatestUpdates = () => {
+    const [email, setEmail] = useState(null);
+    
+    function submitHandler(e) {
+        e.preventDefault();
+        alert(email);
+        setEmail("");
+    };
+    
+    function handleChange(e) {
+        setEmail(e.target.value);
+    };
+
     return (
         <section className="latestUpdatesContainer">
             <div className="latestUpdatesContents">
@@ -15,8 +27,8 @@ const LatestUpdates = () => {
                     <DefaultText>Want to know about our latest updates?</DefaultText>
                 </div>
 
-                <form>
-                    <input style={styles.input} placeholder="Email Address"/>
+                <form onSubmit={submitHandler}>
+                    <input value={email} style={styles.input} placeholder="Email Address" onChange={handleChange}/>
                     <button style={styles.button}>SUBMIT</button>
                 </form>
             </div>
@@ -36,6 +48,7 @@ const styles = {
         width: "90px",
         backgroundColor: Colors.primaryA,
         color: "#fff",
+        outline: "none",
     },
 };
 
