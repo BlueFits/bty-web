@@ -26,8 +26,8 @@
     -->
     <title>BetterThanYesterday</title>
     <script>
-      let host = "www.betterthanyesterday.herokuapp.com" || "betterthanyesterday.herokuapp.com";
-      if ((host == window.location.host) && (window.location.protocol != "https:")){
+      let host = "betterthanyesterday.herokuapp.com";
+      if ((host === window.location.host) && (window.location.protocol !== "https:")){
         window.location.protocol = "https";
       }
     </script>
