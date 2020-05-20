@@ -14,7 +14,7 @@ const Privacy = () => {
     return (
         <div class="disclaimers">
             <DefaultText>
-                <strong>Privacy Policy Test</strong> 
+                <strong>Privacy Policy</strong> 
             </DefaultText>
             <DefaultText>
                 BetterThanYesterday, Inc. built the BetterThanYesterday app as
