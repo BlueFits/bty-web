@@ -180,7 +180,6 @@ button {
 }
 
 .footer {
-    border: 1px solid;
     height: 120px;
     background-color: black;
     display: flex;
@@ -199,7 +198,7 @@ button {
 }
 
 .disclaimers {
-    padding: 20px 150px;
+    padding: 50px 100px 90px 100px;
     line-height: 1.5em;
     text-align: justify;
 }
@@ -207,8 +206,94 @@ button {
 .disclaimers strong {
     margin: 10px 0;
     display: block;
+    text-align: center;
 }
 
 .disclaimers > ul > li {
     list-style: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .mainPage{
+        width: 100vw;
+        overflow: hidden;
+        height: 785px;
+        justify-content: flex-start;
+    }
+    .headerContainer {
+        display: none;
+        flex-direction: column;
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .headerContainer > div:nth-child(1) {
+        display: none;
+    }
+    .headerLogoImgContainer {
+        justify-content: center;
+    }
+    .headerLogoNoTxt {
+        left: -5px;
+    }
+    .mainContent {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 30px;
+    }
+    .leftContent {
+        text-align: center;
+        width: 80vw;
+    }
+    .logo-no-trail-container {
+        left: 10px;
+    }
+    .rocketTrail {
+        left: -380px;
+        top: 87px;
+        transform: scale(1.3);
+    }
+    .cta-container{
+        display: flex;
+        flex-direction: row;
+    }
+    .cta-button {
+        width: 100px;
+    }
+    .rightContent {
+        width: 100vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .phone-container {
+        height: 100%;
+    }
+    .cloudContainer {
+        display: none;
+        transform: scale(1.5);
+        z-index: 3;
+        align-items: flex-end;
+        position: relative;
+        bottom: 40px;
+    }
+    .cloudAsset{
+        position: relative;
+        bottom: -10px;
+    }
+    .latestUpdatesContents {
+        width: 100vw;
+    }
+    .latestUpdatesTxt {
+        width: 80%;
+    }
+    .emailCollect {
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer {
+        width: 100vw;
+    }
 }

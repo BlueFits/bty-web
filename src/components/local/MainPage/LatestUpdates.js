@@ -58,7 +58,7 @@ const LatestUpdates = () => {
                     <DefaultTextLight>Alpha testing is out for google play, submit your email to be a part of the aplha tester group</DefaultTextLight>
                 </div>
 
-                <form onSubmit={submitHandler}>
+                <form className="emailCollect" onSubmit={submitHandler}>
                     <input 
                         value={email} 
                         style={styles.input} 
