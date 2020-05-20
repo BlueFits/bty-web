@@ -198,9 +198,11 @@ button {
 }
 
 .disclaimers {
-    padding: 50px 100px 90px 100px;
+    padding: 50px 0;
     line-height: 1.5em;
     text-align: justify;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .disclaimers strong {
