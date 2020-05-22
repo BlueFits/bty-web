@@ -170,7 +170,7 @@ button {
 }
 
 #ctaButtonId {
-    transition: 0.05s ease-in-out;
+    transition: 0.05s ease-in;
 }
 
 .rightContent {
