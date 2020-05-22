@@ -61,7 +61,7 @@ const MainSection = () => {
         input.style.border = `2px solid ${Colors.green}`;
         input.style.boxShadow = "0px 0px 18px -8px";
     }
-
+    
     return (
         <section id="parallax" className="mainPage">
             <header className="headerContainer" style={{ height: windowHeight * (0.4/3) }}>

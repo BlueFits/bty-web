@@ -270,48 +270,48 @@ button {
     height: 100vh;
     padding: 20px 0;
     display: flex;
-    justify-content: center;
     align-items: center;
+    height: 100vh;
 }
 
 .about-contents-container {
-    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: row;
+    flex-direction: column;
+    width: 100%;
 }
 
 .rocket-circle {
-    height: 400px;
-    width: 400px;
+    height: 250px;
+    width: 250px;
     background-image: url("../assets/images/mainPageBackdrop.png");
-    border-radius: 225px;
+    border-radius: 175px;
     position: relative;
     background-attachment: fixed;
 }
 
 .about-rocket {
     position: absolute;
-    left: 120px;
-    transform: translateY(370px);
-    height: 550px;
+    left: 89px;
+    transform: translateY(280px);
+    height: 250px;
 }
 
-.about-right-content {
+.about-leftContent {
+    
+}
+
+.about-rightContent {
     flex-direction: column;
     align-items: center;
-    text-align: left;
+    text-align: center;
     z-index: 2;
 }
 
 .mini-cloud {
     position: relative;
-    bottom: 15px;
-}
-
-.howDoesItWork-header {
-    margin: 20px 0;
+    bottom: 5px;
 }
 
 .howDoesItWork-section {
@@ -324,9 +324,8 @@ button {
     display: flex;
     flex-direction: row;
     height: 100vh;
-    justify-content: space-around;
     width: 100%;
-    padding: 4% 10%;
+    padding: 4% 0px;
 }
 
 .howDoesItWork-2 {
@@ -347,17 +346,22 @@ button {
 .btyDisplay-container {
     width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 112.5px;
 }
 
 .howDoesItWork-txt-container {
-    width: 500px;
+    width: 50%;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-end;
     flex-direction: column;
     text-align: left;
-    padding: 0 20px;
+    padding-right: 112.5px;
+}
+
+.howDoesItWrk-length-controller {
+    width: 400px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -445,8 +449,16 @@ button {
     }
 }
 
-@media only screen and (min-width: 961px) and (max-width: 1919px) {/** for 1336x 728 **/
+
+@media only screen and (min-width: 961px) and (max-width: 1699px) {/** for 1336x 728 **/
     .about-rocket {
-        transform: translateY(290px);
+        transform: translateY(195px);
     }
+}
+
+
+@media only screen and (min-width: 1700px) {/** for 1920x1080 **/
+  .about-rock {
+    transform: translateY(280px);
+  }
 }

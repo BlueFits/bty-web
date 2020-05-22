@@ -12,8 +12,8 @@ const AboutSection = () => {
         const parallaxEffect = () => {
             const parallax = document.getElementById("rocket-launch");
             let offset = window.pageYOffset;
-            let offsetModified = offset * -0.3;
-            let offsetToUse = offsetModified <= (-465) ? -465: offsetModified;
+            let offsetModified = offset * -0.2;
+            let offsetToUse = offsetModified <= (-273) ? -273: offsetModified;
             parallax.style.top = offsetToUse + "px";
         }
         
@@ -42,19 +42,16 @@ const AboutSection = () => {
                         <img id="rocket-launch" src={rocketLaunching} alt="rocket-launching-up" className="about-rocket"/>
                     </div>
                 </div>
-                <div className="rightContent about-right-content">
+                <div className="rightContent about-rightContent">
                     <div style={styles.aboutHeader}>
                     <HeaderText>About BetterThanYesterday</HeaderText>
                     </div>
                     <div style={styles.aboutTxt}>
                         <DefaultText>
-                            Self improvement is hard. Many times we don't know where to start,
-                            and every so often, we will find that it is difficult to stay motivated and
-                            stay diciplined. Our answer, is to help you build momentum by striving to
+                            Self improvement is hard. Our answer, is to help you build momentum by striving to
                             be better than yesterday.
                         </DefaultText>
                     </div>
-                    
                 </div>
             </div>
         </section>

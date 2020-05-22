@@ -28,52 +28,58 @@ const HowDoesItWork = () => {
 
     return (
         <section id="howItWorks" className="howDoesItWork-section">
-            <div className="howDoesItWork-header">
+            <div>
                 <HeaderText>How it works</HeaderText>
             </div>
             <div className="howDoesItWork-container">
                 <div className="howDoesItWork-txt-container">
-                    <FadeInLeft>
-                        <HeaderText>In the home page...</HeaderText>
-                    </FadeInLeft>
-                    <DefaultText>
-                        The home page is where you can add and see your logs. You can
-                        check your logs from the previous dates and see also how you did
-                        against the yesterday you. Whenever you log a task, you get a point,
-                        the points that you accumulated that day will then be used to
-                        compare with the points that you accumulated the day before. Your
-                        goal is to maintain the points or better yet, obtain more points than you
-                        did on the previous date.
-                    </DefaultText>
+                    <div className="howDoesItWrk-length-controller">
+                        <FadeInLeft>
+                            <HeaderText>In the home page...</HeaderText>
+                        </FadeInLeft>
+                        <DefaultText>
+                            The home page is where you can add and see your logs. You can
+                            check your logs from the previous dates and see also how you did
+                            against the yesterday you. Whenever you log a task, you get a point,
+                            the points that you accumulated that day will then be used to
+                            compare with the points that you accumulated the day before. Your
+                            goal is to maintain the points or better yet, obtain more points than you
+                            did on the previous date.
+                        </DefaultText>
+                    </div>
                 </div>
                 <div className="btyDisplay-container">
                     <img src={home} alt="home" className="btyDisplay" style={{ height: "100%" }}/> 
                 </div>
             </div>
             <div id="howDoesItWorkId-2" className="howDoesItWork-container howDoesItWork-2">
-                <div className="howDoesItWork-txt-container">
-                    <FadeInRight>
-                        <HeaderText>In the goals page...</HeaderText>
-                    </FadeInRight>
-                    <DefaultText>
-                        This is where you set up your goals and the steps that
-                        you need to do in order to achieve that goal. Here
-                        is also where you can edit existing goals/steps and see both
-                        your active and completed goals/steps. 
-                    </DefaultText>
+                <div className="howDoesItWork-txt-container" style={styles.rowReverseStylesTxt}>
+                    <div className="howDoesItWrk-length-controller">
+                        <FadeInRight>
+                            <HeaderText>In the goals page...</HeaderText>
+                        </FadeInRight>
+                        <DefaultText>
+                            This is where you set up your goals and the steps that
+                            you need to do in order to achieve that goal. Here
+                            is also where you can edit existing goals/steps and see both
+                            your active and completed goals/steps. 
+                        </DefaultText>
+                    </div>
                 </div>
-                <div className="btyDisplay-container">
+                <div className="btyDisplay-container" style={styles.rowReverseStylesDisplay}>
                     <img src={goals} alt="home" className="btyDisplay" style={{ height: "100%" }}/> 
                 </div>
             </div>
             <div className="howDoesItWork-container">
                 <div className="howDoesItWork-txt-container">
-                    <FadeInFromLeft>
-                        <HeaderText>Logging your tasks...</HeaderText>
-                    </FadeInFromLeft>
-                    <DefaultText>
-                        In here is where you write the specific task that you did for your goal.
-                    </DefaultText>
+                    <div className="howDoesItWrk-length-controller">
+                        <FadeInFromLeft>
+                            <HeaderText>Logging your tasks...</HeaderText>
+                        </FadeInFromLeft>
+                        <DefaultText>
+                            In here is where you write the specific task that you did for your goal.
+                        </DefaultText>
+                    </div>
                 </div>
                 <div className="btyDisplay-container">
                     <img src={log} alt="home" className="btyDisplay" style={{ height: "100%" }}/> 
@@ -81,6 +87,11 @@ const HowDoesItWork = () => {
             </div>
         </section>
     );
+};
+
+const styles = {
+    rowReverseStylesTxt: { alignItems: "flex-start", padding: "0px 0px 0px 112.5px" },
+    rowReverseStylesDisplay: { padding: "0px 112.5px 0px 0px", justifyContent: "flex-end" },
 };
 
 export default HowDoesItWork;
