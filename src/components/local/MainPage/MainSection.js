@@ -1,5 +1,9 @@
 import React, { useState, useLayoutEffect, useEffect } from "react";
 import simpleParallax from "simple-parallax-js";
+import AnchorLink from "react-anchor-link-smooth-scroll";
+//COMPONENTS
+import Colors from "../../../constants/Colors";
+//IMAGES
 import LogoNoTxt from "../../../assets/images/LogoNoTxt.svg";
 import CloudsAssetSVG from "../../../assets/images/clouds-adjust.svg";
 import LogoNoTrail from "../../../assets/images/LogoNoTrail.svg";
@@ -8,7 +12,7 @@ import googleCTA from "../../../assets/images/GooglePlayCTA.svg";
 import appleCTA from "../../../assets/images/AppleCTA.svg";
 import phone from "../../../assets/images/phoneHome.png";
 //CONTROLLERS
-import { HeaderText, SmallText } from "../../../controllers/textController";
+import { HeaderText, SmallText, DefaultTextSemiBold } from "../../../controllers/textController";
 
 const MainSection = () => {
     //CONSTANTS
@@ -51,6 +55,13 @@ const MainSection = () => {
         transition: 'cubic-bezier(0,0,0,1)',
     });
 
+    //Handlers
+    function aplhaTestCtaHandler() {
+        const input = document.getElementById("getEmailInput");
+        input.style.border = `2px solid ${Colors.green}`;
+        input.style.boxShadow = "0px 0px 20px -8px";
+    }
+
     return (
         <section id="parallax" className="mainPage">
             <header className="headerContainer" style={{ height: windowHeight * (0.4/3) }}>
@@ -60,7 +71,14 @@ const MainSection = () => {
                     </div>
                     <SmallText style={styles.defaultTextColor}>BetterThanYesterday</SmallText>
                 </div>
-                <div>{/* Supposed NAV */}</div>
+                <div>
+                    <nav className="mainNav">
+                        <ul>
+                            <li><AnchorLink href="#about"><DefaultTextSemiBold>About</DefaultTextSemiBold></AnchorLink></li>
+                            <li><AnchorLink href="#howItWorks"><DefaultTextSemiBold>How It Works</DefaultTextSemiBold></AnchorLink></li>
+                        </ul>
+                    </nav>
+                </div>
             </header>
 
             <div className="mainContent" style={{ height: windowHeight * (2/3) }}>
@@ -77,13 +95,15 @@ const MainSection = () => {
                         </div>
 
                         <div className="cta-container">
-                            <img src={googleCTA} alt="googleCTA" className="cta-button" />
+                            <AnchorLink href="#getEmail" onClick={aplhaTestCtaHandler}>
+                                <img src={googleCTA} alt="googleCTA" className="cta-button" />
+                            </AnchorLink>
                             <img src={appleCTA} alt="appleCTA" className="cta-button"/>
                         </div>
                     </div>
                 </div>
 
-                <div className="rightContent">
+                <div className="rightContent" style={styles.rightContentSpecific}>
                     <div className="phone-container">
                         <img src={phone} alt="phone" className="phonePng"/>
                     </div>
@@ -104,6 +124,10 @@ const styles = {
     },
     defaultTextColor: {
         color: "#fff",
+    },
+    rightContentSpecific: {
+        paddingTop: "30px",
+        zIndex: 2,
     },
 };
 

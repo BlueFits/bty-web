@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import validator from "validator";
-import { DefaultTextSemiBold, ErrorMsg, DefaultTextLight, DefaultTextConItalic } from "../../../controllers/textController";
+import { DefaultTextSemiBold, ErrorMsg } from "../../../controllers/textController";
 import mail from "../../../assets/images/mail.png";
 //CONSTANTS
 import Colors from "../../../constants/Colors";
 //COMPONENTS
-import FadeInSection from "../../containers/FadeInSection";
+import FadeInSection from "../../containers/AOS/FadeInSection";
 //Servers
 import Server from "../../../config/Server";
 
@@ -16,7 +16,9 @@ const LatestUpdates = () => {
     const [success_msg, setSuccess_Msg] = useState("");
     //Handlers
     async function submitHandler(e) {
-        
+        const input = document.getElementById("getEmailInput");
+        input.style.border = `1px solid ${Colors.grey}`;
+        input.style.boxShadow = "0px 0px 0px 0px";
         e.preventDefault();
         //alert(email);
         setEmail("");
@@ -47,7 +49,7 @@ const LatestUpdates = () => {
     };
     
     return (
-        <section className="latestUpdatesContainer">
+        <section id="getEmail" className="latestUpdatesContainer">
             <div className="latestUpdatesContents">
                 <FadeInSection>
                     <img src={mail} alt="mail" className="mailPng"/>
@@ -55,13 +57,14 @@ const LatestUpdates = () => {
 
                 <div className="latestUpdatesTxt">
                     <DefaultTextSemiBold>Want to know about our latest updates?</DefaultTextSemiBold>
-                    <DefaultTextLight>Alpha testing is out for google play, submit your email to be a part of the aplha tester group</DefaultTextLight>
+                    <DefaultTextSemiBold>Alpha testing is out for google play, submit your email to be a part of the aplha tester group</DefaultTextSemiBold>
                 </div>
 
                 <form className="emailCollect" onSubmit={submitHandler}>
                     <input 
+                        className="emailCollect-input"
+                        id="getEmailInput"
                         value={email} 
-                        style={styles.input} 
                         placeholder="Email Address"
                         onChange={(e) => setEmail(e.target.value)}
                     />
@@ -77,11 +80,6 @@ const LatestUpdates = () => {
 };
 
 const styles = {
-    input: { 
-        borderRadius: "5px 0 0 5px", 
-        height: "40px", 
-        width: "300px"
-    },
     button: { 
         borderRadius: "0 5px 5px 0", 
         height: "40px", 

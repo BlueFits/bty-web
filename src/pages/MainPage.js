@@ -1,10 +1,13 @@
 import React, { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import MainSection from "../components/local/MainPage/MainSection";
-import LatestUpdates from "../components/local/MainPage/LatestUpdates";
 import publicIp from "public-ip";
 //SERVER
 import Server from "../config/Server";
+//PAGES
+import MainSection from "../components/local/MainPage/MainSection";
+import LatestUpdates from "../components/local/MainPage/LatestUpdates";
+import AboutSection from "../components/local/MainPage/AboutSection";
+import HowDoesItWork from "../components/local/MainPage/HowDoesItWork";
 
 const Index = () => {
     //Scroll to Top
@@ -33,6 +36,8 @@ const Index = () => {
     return (
         <main>
             <MainSection />
+            <AboutSection />
+            <HowDoesItWork />
             <LatestUpdates />
         </main>
     );

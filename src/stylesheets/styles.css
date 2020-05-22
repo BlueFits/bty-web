@@ -12,9 +12,8 @@
 input {
     padding: 5px 10px;
     outline: none;
-    border: 1px solid;
+    border: 1px solid #9b9b9b;
     background-color: #f4f4f4;
-    border-color: #9b9b9b;
     font-family: "Myriad-reg";
 }
 
@@ -39,6 +38,55 @@ button {
     visibility: visible;
 }
 
+.fade-in-left-section {
+    opacity: 0;
+    transform: translateX(-10px);
+    visibility: hidden;
+    transition: opacity 470ms ease-out, transform 470ms ease-out,
+    visibility 470ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+
+.fade-in-left-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.fade-in-right-section {
+    opacity: 0;
+    transform: translateX(10px);
+    visibility: hidden;
+    transition: opacity 470ms ease-out, transform 470ms ease-out,
+    visibility 470ms ease-out;
+    will-change: opacity, transform, visibility;
+}
+
+.fade-in-right-section.is-visible {
+    opacity: 1;
+    transform: none;
+    visibility: visible;
+}
+
+.mainNav {
+    
+}
+
+.mainNav ul {
+    display: flex;
+}
+
+.mainNav ul li {
+    list-style: none;
+    color: #fff;
+    margin: 0 40px;
+}
+
+.mainNav ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
 .mainPage {
     height: 100vh;
     display: flex;
@@ -58,7 +106,7 @@ button {
     padding: 0 80px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .headerLogoImgContainer {
@@ -129,10 +177,8 @@ button {
 .rightContent {
     width: 50%;
     height: 100%;
-    z-index: 2;
     display: flex;
     justify-content: center;
-    padding-top: 30px;
 }
 
 .phone-container {
@@ -157,7 +203,7 @@ button {
 
 .latestUpdatesContainer {
     background-color: #fff;
-    height: 350px;
+    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -177,6 +223,12 @@ button {
 
 .mailPng {
     height: 50px;
+}
+
+.emailCollect > input {
+    border-radius: 5px 0 0 5px;
+    height: 40px;
+    width: 300px;
 }
 
 .footer {
@@ -213,6 +265,100 @@ button {
 
 .disclaimers > ul > li {
     list-style: none;
+}
+
+.about-section {
+    height: 100vh;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-contents-container {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.rocket-circle {
+    height: 400px;
+    width: 400px;
+    background-image: url("../assets/images/mainPageBackdrop.png");
+    border-radius: 225px;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.about-rocket {
+    position: absolute;
+    left: 120px;
+    transform: translateY(370px);
+    height: 550px;
+}
+
+.about-right-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    z-index: 2;
+}
+
+.mini-cloud {
+    position: relative;
+    bottom: 15px;
+}
+
+.howDoesItWork-header {
+    margin: 20px 0;
+}
+
+.howDoesItWork-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.howDoesItWork-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    justify-content: space-around;
+    width: 100%;
+    padding: 4% 10%;
+}
+
+.howDoesItWork-2 {
+    background-image: url("../assets/images/mainPageBackdrop.png");
+    flex-direction: row-reverse;
+}
+
+.howDoesItWork-2 p,
+.howDoesItWork-2 h1 {
+    color: #fff;
+}
+
+.btyDisplay {
+    box-shadow: 0px 0px 20px -8px;
+    border-radius: 30px;
+} 
+
+.btyDisplay-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.howDoesItWork-txt-container {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: left;
+    padding: 0 20px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -297,5 +443,11 @@ button {
     }
     .footer {
         width: 100vw;
+    }
+}
+
+@media only screen and (min-width: 961px) and (max-width: 1919px) {/** for 1336x 728 **/
+    .about-rocket {
+        transform: translateY(290px);
     }
 }
