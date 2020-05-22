@@ -59,7 +59,7 @@ const MainSection = () => {
     function aplhaTestCtaHandler() {
         const input = document.getElementById("getEmailInput");
         input.style.border = `2px solid ${Colors.green}`;
-        input.style.boxShadow = "0px 0px 20px -8px";
+        input.style.boxShadow = "0px 0px 18px -8px";
     }
 
     return (
@@ -96,7 +96,13 @@ const MainSection = () => {
 
                         <div className="cta-container">
                             <AnchorLink href="#getEmail" onClick={aplhaTestCtaHandler}>
-                                <img src={googleCTA} alt="googleCTA" className="cta-button" />
+                                <img id="ctaButtonId" 
+                                    onMouseOver={() => document.getElementById("ctaButtonId").style.transform = "translateY(-3px)"}
+                                    onMouseOut={() => document.getElementById("ctaButtonId").style.transform = "translateY(0px)"}
+                                    src={googleCTA} 
+                                    alt="googleCTA" 
+                                    className="cta-button" 
+                                />
                             </AnchorLink>
                             <img src={appleCTA} alt="appleCTA" className="cta-button"/>
                         </div>

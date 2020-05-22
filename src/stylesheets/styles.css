@@ -68,10 +68,6 @@ button {
     visibility: visible;
 }
 
-.mainNav {
-    
-}
-
 .mainNav ul {
     display: flex;
 }
@@ -173,6 +169,9 @@ button {
     margin-right: 5px;
 }
 
+#ctaButtonId {
+    transition: 0.05s ease-in-out;
+}
 
 .rightContent {
     width: 50%;
