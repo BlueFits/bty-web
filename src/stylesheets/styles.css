@@ -283,8 +283,8 @@ button {
 }
 
 .rocket-circle {
-    height: 250px;
-    width: 250px;
+    height: 280px;
+    width: 280px;
     background-image: url("../assets/images/mainPageBackdrop.png");
     border-radius: 175px;
     position: relative;
@@ -293,8 +293,8 @@ button {
 
 .about-rocket {
     position: absolute;
-    left: 89px;
-    transform: translateY(280px);
+    left: 104px;
+    transform: translateY(310px);
     height: 250px;
 }
 
@@ -452,13 +452,14 @@ button {
 
 @media only screen and (min-width: 961px) and (max-width: 1699px) {/** for 1336x 728 **/
     .about-rocket {
-        transform: translateY(195px);
+        transform: translateY(230px);
     }
 }
 
-
-@media only screen and (min-width: 1700px) {/** for 1920x1080 **/
+/*
+@media only screen and (min-width: 1700px) {/** for 1920x1080 
   .about-rock {
-    transform: translateY(280px);
+    transform: translateY(300px);
   }
 }
+*/
