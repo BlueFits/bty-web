@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { isMobileOnly, MobileOnlyView, BrowserView, isMobile } from "react-device-detect";
 //COMPONENTS
 import FadeInLeft from "../../containers/AOS/FadeInFromLeft";
 import FadeInRight from "../../containers/AOS/FadeInFromRight";
@@ -8,7 +9,7 @@ import { HeaderText, DefaultText } from "../../../controllers/textController";
 import home from "../../../assets/images/home.png";
 import goals from "../../../assets/images/goals.png";
 import log from "../../../assets/images/log.png";
-import FadeInFromLeft from "../../containers/AOS/FadeInFromLeft";
+import mobileGoals from "../../../assets/images/mobile-goals.png";
 
 const HowDoesItWork = () => {
 
@@ -38,6 +39,7 @@ const HowDoesItWork = () => {
                             <HeaderText>In the home page...</HeaderText>
                         </FadeInLeft>
                         <DefaultText>
+                            
                             The home page is where you can add and see your logs. You can
                             check your logs from the previous dates and see also how you did
                             against the yesterday you. Whenever you log a task, you get a point,
@@ -67,15 +69,20 @@ const HowDoesItWork = () => {
                     </div>
                 </div>
                 <div className="btyDisplay-container" style={styles.rowReverseStylesDisplay}>
-                    <img src={goals} alt="home" className="btyDisplay" style={{ height: "100%" }}/> 
+                    <BrowserView style={{ height: "100%" }}>
+                        <img src={goals} alt="home" className="btyDisplay" style={{ height: "100%" }}/> 
+                    </BrowserView>
+                    <MobileOnlyView style={{ height: "100%" }}>
+                        <img src={mobileGoals} alt="home" className="btyDisplay" style={{ height: "100%" }}/> 
+                    </MobileOnlyView>
                 </div>
             </div>
             <div className="howDoesItWork-container">
                 <div className="howDoesItWork-txt-container">
                     <div className="howDoesItWrk-length-controller">
-                        <FadeInFromLeft>
+                        <FadeInLeft>
                             <HeaderText>Logging your tasks...</HeaderText>
-                        </FadeInFromLeft>
+                        </FadeInLeft>
                         <DefaultText>
                             In here is where you write the specific task that you did for your goal.
                         </DefaultText>
@@ -90,8 +97,14 @@ const HowDoesItWork = () => {
 };
 
 const styles = {
-    rowReverseStylesTxt: { alignItems: "flex-start", padding: "0px 0px 0px 112.5px" },
-    rowReverseStylesDisplay: { padding: "0px 112.5px 0px 0px", justifyContent: "flex-end" },
+    rowReverseStylesTxt: { 
+        alignItems: isMobileOnly ? "center" : "flex-start", 
+        padding: isMobileOnly ? "0px": "0px 0px 0px 112.5px" 
+    },
+    rowReverseStylesDisplay: { 
+        padding: isMobileOnly ? "0px" : "0px 112.5px 0px 0px", 
+        justifyContent: isMobile ? "center" : "flex-end" 
+    },
 };
 
 export default HowDoesItWork;
