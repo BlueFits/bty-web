@@ -39,7 +39,6 @@ const HowDoesItWork = () => {
                             <HeaderText>In the home page...</HeaderText>
                         </FadeInLeft>
                         <DefaultText>
-                            
                             The home page is where you can add and see your logs. You can
                             check your logs from the previous dates and see also how you did
                             against the yesterday you. Whenever you log a task, you get a point,
