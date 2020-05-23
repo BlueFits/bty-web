@@ -20,13 +20,15 @@ const Index = () => {
     useEffect(() => {
         const getIp = async () => {
             const ip = await publicIp.v4();
+            const referrer = document.referrer;
             await fetch(Server + "utils/add_visitor_info", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    ip
+                    ip,
+                    referrer,
                 }),
             });
         }
