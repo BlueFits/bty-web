@@ -3,4 +3,4 @@ const servers = {
     production: "https://bty-server.herokuapp.com/",
 };
 
-export default servers.development;
+export default servers.production;
