@@ -20,8 +20,8 @@ const LatestUpdates = () => {
         input.style.border = `1px solid ${Colors.grey}`;
         input.style.boxShadow = "0px 0px 0px 0px";
         e.preventDefault();
-        //alert(email);
         setEmail("");
+        const referrer = document.referrer;
         if (!validator.isEmail(email) || validator.isEmpty(email)) {
             setError_Msg("Something went wrong, please try again");
         } else {
@@ -31,7 +31,8 @@ const LatestUpdates = () => {
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
-                    email
+                    email,
+                    referrer,
                 }),
             });
 
