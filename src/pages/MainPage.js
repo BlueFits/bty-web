@@ -20,6 +20,7 @@ const Index = () => {
     useEffect(() => {
         const getIp = async () => {
             const ip = await publicIp.v4();
+            console.log(ip);
             const referrer = document.referrer;
             await fetch(Server + "utils/add_visitor_info", {
                 method: "POST",
