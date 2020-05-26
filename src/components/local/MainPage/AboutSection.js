@@ -53,10 +53,10 @@ const AboutSection = () => {
                     </div>
                     <div className="about-rightTxt">
                         <DefaultText>
-                            Self improvement is hard. Our answer, is to help you build momentum by striving to
-                            be better than yesterday. This is done via a point system that aims to assess your 
-                            productivity each day towards your goal. The idea is simple, the more points that you have, 
-                            the better you are from yesterday.
+                            Self improvement is hard. 
+                            With BetterThanYesterday We offer you ways on how you can 
+                            become a better you, and a method to how you can
+                            stay consistent with your goals.
                         </DefaultText>
                     </div>
                 </div>

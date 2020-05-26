@@ -29,23 +29,21 @@ const HowDoesItWork = () => {
 
     return (
         <section id="howItWorks" className="howDoesItWork-section">
-            <div>
-                <HeaderText>How it works</HeaderText>
+            <div className="howItWorks-header">
+                <HeaderText>Become the best version of yourself</HeaderText>
             </div>
             <div className="howDoesItWork-container">
                 <div className="howDoesItWork-txt-container">
                     <div className="howDoesItWrk-length-controller">
                         <FadeInLeft>
-                            <HeaderText>In the home page...</HeaderText>
+                            <HeaderText>Stay Consistent</HeaderText>
                         </FadeInLeft>
                         <DefaultText>
-                            The home page is where you can add and see your logs. You can
-                            check your logs from the previous dates and see also how you did
-                            against the yesterday you. Whenever you log a task, you get a point,
-                            the points that you accumulated that day will then be used to
-                            compare with the points that you accumulated the day before. Your
-                            goal is to maintain the points or better yet, obtain more points than you
-                            did on the previous date.
+                            You are given points based on your activities in the current day, where
+                            it is then compared to your points on the previous day. You are required
+                            to at least match your points from the previous day, and if you have, you are
+                            then rewarded double the points more for every action you take towards becoming
+                            better than yesterday.
                         </DefaultText>
                     </div>
                 </div>
@@ -57,13 +55,13 @@ const HowDoesItWork = () => {
                 <div className="howDoesItWork-txt-container" style={styles.rowReverseStylesTxt}>
                     <div className="howDoesItWrk-length-controller">
                         <FadeInRight>
-                            <HeaderText>In the goals page...</HeaderText>
+                            <HeaderText>Learn new skills and set new goals</HeaderText>
                         </FadeInRight>
                         <DefaultText>
-                            This is where you set up your goals and the steps that
-                            you need to do in order to achieve that goal. Here
-                            is also where you can edit existing goals/steps and see both
-                            your active and completed goals/steps. 
+                            We offer new goals and new skills to learn or set your own custom goals. 
+                            There are two sections on our goals page, short-term goals and long-term goals. Short-term goals 
+                            is where you can put your immediate goals. For goals that require a long time and consistent 
+                            effort, you can put it in the long-term section.
                         </DefaultText>
                     </div>
                 </div>
@@ -80,10 +78,10 @@ const HowDoesItWork = () => {
                 <div className="howDoesItWork-txt-container">
                     <div className="howDoesItWrk-length-controller">
                         <FadeInLeft>
-                            <HeaderText>Logging your tasks...</HeaderText>
+                            <HeaderText>Be accountable</HeaderText>
                         </FadeInLeft>
                         <DefaultText>
-                            In here is where you write the specific task that you did for your goal.
+                            Say the specific task that you did in order to learn the skill or acheive the goal.
                         </DefaultText>
                     </div>
                 </div>
