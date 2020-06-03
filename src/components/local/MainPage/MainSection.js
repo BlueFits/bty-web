@@ -8,7 +8,7 @@ import LogoNoTxt from "../../../assets/images/LogoNoTxt.svg";
 import CloudsAssetSVG from "../../../assets/images/clouds-adjust.svg";
 import LogoNoTrail from "../../../assets/images/LogoNoTrail.svg";
 import rocketTrail from "../../../assets/images/rocketTrail.svg";
-import googleCTA from "../../../assets/images/GooglePlayCTA.svg";
+import googleCTA from "../../../assets/images/GooglePlayCTA-outNow.svg";
 import appleCTA from "../../../assets/images/AppleCTA.svg";
 import phone from "../../../assets/images/phoneHome.png";
 //CONTROLLERS
@@ -95,7 +95,12 @@ const MainSection = () => {
                         </div>
 
                         <div className="cta-container">
-                            <AnchorLink href="#getEmail" onClick={aplhaTestCtaHandler}>
+                            <a 
+                                href="https://play.google.com/store/apps/details?id=dev.betterthanyesterday.better_than_yesterday" 
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={aplhaTestCtaHandler}
+                            >
                                 <img id="ctaButtonId" 
                                     onMouseOver={() => document.getElementById("ctaButtonId").style.transform = "translateY(-3px)"}
                                     onMouseOut={() => document.getElementById("ctaButtonId").style.transform = "translateY(0px)"}
@@ -103,7 +108,7 @@ const MainSection = () => {
                                     alt="googleCTA" 
                                     className="cta-button" 
                                 />
-                            </AnchorLink>
+                            </a>
                             <img src={appleCTA} alt="appleCTA" className="cta-button"/>
                         </div>
                     </div>

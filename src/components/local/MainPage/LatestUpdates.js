@@ -58,7 +58,6 @@ const LatestUpdates = () => {
 
                 <div className="latestUpdatesTxt">
                     <DefaultTextSemiBold>Want to know about our latest updates?</DefaultTextSemiBold>
-                    <DefaultTextSemiBold>Alpha testing is coming out for google play in early june, submit your email to be a part of the aplha tester group</DefaultTextSemiBold>
                 </div>
 
                 <form className="emailCollect" onSubmit={submitHandler}>
