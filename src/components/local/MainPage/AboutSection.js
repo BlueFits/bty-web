@@ -49,14 +49,13 @@ const AboutSection = () => {
                 </div>
                 <div className="about-rightContent">
                     <div className="about-rightHeader">
-                    <HeaderText>About BetterThanYesterday</HeaderText>
+                    <HeaderText>About</HeaderText>
                     </div>
                     <div className="about-rightTxt">
                         <DefaultText>
-                            Self improvement is hard. 
-                            With BetterThanYesterday We offer you ways on how you can 
-                            become a better you, and a method to how you can
-                            stay consistent with your goals.
+                            Small daily routines are what make dreams a reality. BetterThanYesterday helps you 
+                            organize the small steps that are necessary into acheiving your goals. Additionally, 
+                            we hold you accountable by comparing your yesterday actions to your actions today.
                         </DefaultText>
                     </div>
                 </div>

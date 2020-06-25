@@ -40,10 +40,7 @@ const HowDoesItWork = () => {
                         </FadeInLeft>
                         <DefaultText>
                             You are given points based on your activities in the current day, where
-                            it is then compared to your points on the previous day. You are required
-                            to at least match your points from the previous day, and if you have, you are
-                            then rewarded double the points more for every action you take towards becoming
-                            better than yesterday.
+                            it is then compared to your points on the previous day.
                         </DefaultText>
                     </div>
                 </div>
@@ -55,13 +52,11 @@ const HowDoesItWork = () => {
                 <div className="howDoesItWork-txt-container" style={styles.rowReverseStylesTxt}>
                     <div className="howDoesItWrk-length-controller">
                         <FadeInRight>
-                            <HeaderText>Learn new skills and set new goals</HeaderText>
+                            <HeaderText>Set your goals</HeaderText>
                         </FadeInRight>
                         <DefaultText>
-                            We offer new goals and new skills to learn or set your own custom goals. 
-                            There are two sections on our goals page, short-term goals and long-term goals. Short-term goals 
-                            is where you can put your immediate goals. For goals that require a long time and consistent 
-                            effort, you can put it in the long-term section.
+                            After setting a goal you will have to add the necessary small steps
+                            that are needed in order to achieve the goal. 
                         </DefaultText>
                     </div>
                 </div>
