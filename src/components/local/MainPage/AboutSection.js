@@ -49,7 +49,7 @@ const AboutSection = () => {
                 </div>
                 <div className="about-rightContent">
                     <div className="about-rightHeader">
-                    <HeaderText>About</HeaderText>
+                    <HeaderText>About BetterThanYesterday</HeaderText>
                     </div>
                     <div className="about-rightTxt">
                         <DefaultText>
